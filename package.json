@@ -1,0 +1,17 @@
+{
+  "name": "WE-NEWS",
+  "version": "1.0.0",
+  "description": "Web Essentials News Bulletin",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Web Essentials",
+  "license": "BSD-2-Clause",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest",
+    "mysql"      : "^2.5.4"
+  }
+}
