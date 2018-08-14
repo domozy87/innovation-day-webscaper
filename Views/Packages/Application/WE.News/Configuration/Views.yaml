@@ -1,0 +1,4 @@
+-
+  requestFilter: 'isPackage("TYPO3.Fluid") && isSubPackage("ViewHelpers\Widget") && isController("Paginate") && isAction("index")'
+  options:
+    templatePathAndFilename: 'resource://WE.News/Private/Templates/ViewHelpers/Widget/Paginate/Index.html'

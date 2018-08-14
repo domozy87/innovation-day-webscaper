@@ -1,0 +1,48 @@
+<f:layout name="Default"/>
+
+<f:section name="Title">A list of scraping sources</f:section>
+
+<f:section name="Content">
+	<f:if condition="{scrapingSources}">
+		<f:then>
+			<table class="table table-hover table-responsive">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>URL</th>
+						<th>Category</th>
+						<th>List html selector</th>
+						<th>Detail html selector</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<f:for each="{scrapingSources}" as="scrapingSource">
+						<tr>
+							<td>{scrapingSource.name}</td>
+							<td>{scrapingSource.url}</td>
+							<td>{scrapingSource.category.name}</td>
+							<td>{scrapingSource.listHtmlSelector}</td>
+							<td>{scrapingSource.detailHtmlSelector}</td>
+							<td>
+								<f:link.action action="show" arguments="{scrapingSource: scrapingSource}" class="btn btn-success"><span class="glyphicon glyphicon-list"></span>
+								</f:link.action>
+								<f:link.action action="edit" arguments="{scrapingSource: scrapingSource}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>
+								</f:link.action>
+								<f:form action="delete" arguments="{scrapingSource: scrapingSource}" style="display:inline">
+									<button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+								</f:form>
+							</td>
+						</tr>
+					</f:for>
+				</tbody>
+			</table>
+		</f:then>
+		<f:else>
+			<p>No scraping sources created yet.</p>
+		</f:else>
+	</f:if>
+	<p>
+		<f:link.action action="new" class="btn btn-primary">New</f:link.action>
+	</p>
+</f:section>

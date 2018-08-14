@@ -1,0 +1,40 @@
+<f:layout name="Default" />
+
+<f:section name="Title">A list of news</f:section>
+
+<f:section name="Content">
+	<f:if condition="{news}">
+		<f:then>
+			<f:widget.paginate objects="{news}" as="paginatedNewsItems" configuration="{itemsPerPage: 5}">
+				<f:for each="{paginatedNewsItems}" as="newsItem">
+					<article>
+						<h2>
+							<f:link.action action="show" arguments="{news: newsItem}">{newsItem.title}</f:link.action>
+						</h2>
+						<br/>
+						<br/>
+						<div class="row text-muted">
+							<div class="col-sm-4">
+								Date: {newsItem.crDate -> f:format.date(format: "d.m.Y")}
+							</div>
+							<div class="col-sm-4">
+								Author: {newsItem.author}
+							</div>
+							<div class="col-sm-4">
+								Source: {newsItem.scrapingSource.name}
+							</div>
+						</div>
+						<div class="lead">
+							{newsItem.lead}
+						</div>
+						<br/>
+						<hr class="line">
+					</article>
+				</f:for>
+			</f:widget.paginate>
+		</f:then>
+		<f:else>
+			<p>No news to show.</p>
+		</f:else>
+	</f:if>
+</f:section>

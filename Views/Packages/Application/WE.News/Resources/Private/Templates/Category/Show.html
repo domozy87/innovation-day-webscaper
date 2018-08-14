@@ -1,0 +1,14 @@
+<f:layout name="Default"/>
+
+<f:section name="Title">Show category"{category.name}"</f:section>
+
+<f:section name="Content">
+	<div class="col-sm-6">
+		<table class="table table-responsive">
+			<tr>
+				<th>Name</th>
+				<td>{category.name}</td>
+			</tr>
+		</table>
+		<f:link.action action="index" class="btn btn-primary">Back</f:link.action>
+</f:section>

@@ -1,0 +1,74 @@
+<f:layout name="Default"/>
+
+<f:section name="Title">Show scraping source"{scrapingSource.name}"</f:section>
+
+
+
+<f:section name="Content">
+
+<div class="col-sm-6">
+	<table class="table table-responsive">
+		<tr>
+			<th>Name</th>
+			<td>{scrapingSource.name}</td>
+		</tr>
+		<tr>
+			<th>Url</th>
+			<td>{scrapingSource.url}</td>
+		</tr>
+		<tr>
+			<th>Category</th>
+			<td>{scrapingSource.category.name}</td>
+		</tr>
+		<tr>
+			<th>List html selector</th>
+			<td>{scrapingSource.listHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Detail html selector</th>
+			<td>{scrapingSource.DetailHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Title html selector</th>
+			<td>{scrapingSource.titleHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Lead html selector</th>
+			<td>{scrapingSource.leadHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Detail url html selector</th>
+			<td>{scrapingSource.detailUrlHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Thumbnail html selector</th>
+			<td>{scrapingSource.thumbnailHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Author html selector</th>
+			<td>{scrapingSource.authorHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Date html selector</th>
+			<td>{scrapingSource.dateHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Detail html selector</th>
+			<td>{scrapingSource.DetailHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Body html selector</th>
+			<td>{scrapingSource.bodyHtmlSelector}</td>
+		</tr>
+		<tr>
+			<th>Image html selector</th>
+			<td>{scrapingSource.imageHtmlSelector}</td>
+		</tr>
+
+
+	</table>
+	<f:link.action action="index" class="btn btn-primary">Back</f:link.action>
+</div>
+
+
+</f:section>

@@ -1,0 +1,97 @@
+<f:layout name="Default"/>
+
+<f:section name="Title">Edit scraping source "{scrapingSource.name}"</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{scrapingSource}" objectName="scrapingSource" class="form-horizontal">
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label">Name</label>
+			<div class="col-sm-6">
+				<f:form.textfield property="name" id="name" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="url" class="col-sm-2 control-label">URL</label>
+			<div class="col-sm-6">
+				<f:form.textfield property="url" id="url" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="category" class="col-sm-2 control-label">Category</label>
+			<div class="col-sm-6">
+				<f:form.select property="category" id="category" class="form-control" options="{categories}" optionLabelField="name"/>
+			</div>
+		</div>
+		<fieldset>
+			<legend>HTML Selector</legend>
+			<div class="form-group">
+				<label for="listHtmlSelector" class="col-sm-2 control-label">listHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="listHtmlSelector" id="listHtmlSelector" class="form-control" placeholder="listHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="detailHtmlSelector" class="col-sm-2 control-label">DetailHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="detailHtmlSelector" id="detailHtmlSelector" class="form-control" placeholder="detailHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="titleHtmlSelector" class="col-sm-2 control-label">titleHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="titleHtmlSelector" id="titleHtmlSelector" class="form-control" placeholder="titleHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="leadHtmlSelector" class="col-sm-2 control-label">leadHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="leadHtmlSelector" id="leadHtmlSelector" class="form-control" placeholder="leadHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="detailUrlHtmlSelector" class="col-sm-2 control-label">detailUrlHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="detailUrlHtmlSelector" id="detailUrlHtmlSelector" class="form-control" placeholder="detailUrlHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="thumbnailHtmlSelector" class="col-sm-2 control-label">thumbnailHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="thumbnailHtmlSelector" id="thumbnailHtmlSelector" class="form-control" placeholder="thumbnailHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="authorHtmlSelector" class="col-sm-2 control-label">authorHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="authorHtmlSelector" id="authorHtmlSelector" class="form-control" placeholder="authorHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="dateHtmlSelector" class="col-sm-2 control-label">dateHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="dateHtmlSelector" id="dateHtmlSelector" class="form-control" placeholder="dateHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="bodyHtmlSelector" class="col-sm-2 control-label">bodyHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="bodyHtmlSelector" id="bodyHtmlSelector" class="form-control" placeholder="bodyHtmlSelector" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="imageHtmlSelector" class="col-sm-2 control-label">imageHtmlSelector</label>
+				<div class="col-sm-6">
+					<f:form.textfield property="imageHtmlSelector" id="imageHtmlSelector" class="form-control" placeholder="imageHtmlSelector" />
+				</div>
+			</div>
+		</fieldset>
+		<div class="form-group">
+			<div class="col-sm-offset-2">
+				<div class="col-sm-8">
+					<f:form.submit value="Update" class="btn btn-primary" />
+					<f:link.action action="index" class="btn btn-default" >Cancel</f:link.action>
+				</div>
+			</div>
+		</div>
+	</f:form>
+</f:section>

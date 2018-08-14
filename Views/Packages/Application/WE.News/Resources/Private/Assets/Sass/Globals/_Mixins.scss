@@ -1,0 +1,14 @@
+$tablet: "(min-width: #{$tablet})";
+$mobile: "(min-width: #{$mobile})";
+
+@mixin tablet() {
+	@media #{$tablet} {
+		@content;
+	}
+}
+
+@mixin mobile() {
+	@media #{$mobile} {
+		@content;
+	}
+}

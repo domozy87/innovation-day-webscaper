@@ -1,0 +1,24 @@
+<f:layout name="Default"/>
+
+<f:section name="Title">{news.title}</f:section>
+
+<f:section name="Content">
+	<br/>
+	<div class="row text-muted">
+		<div class="col-sm-4">
+			Date: {news.crDate -> f:format.date(format: "d.m.Y")}
+		</div>
+		<div class="col-sm-4">
+			Author: {news.author}
+		</div>
+		<div class="col-sm-4">
+			Source: {news.scrapingSource.name}
+		</div>
+	</div>
+	<hr class="line">
+	<article>{news.body -> f:format.raw()}</article>
+	<hr>
+	<f:link.action action="index" class="btn btn-primary">Back</f:link.action>
+
+
+</f:section>

@@ -1,0 +1,10 @@
+#                                                                        #
+# Default subroutes configuration for the WE.News package               #
+#
+
+-
+  name: 'Map base url to action index of news'
+  uriPattern: ''
+  defaults:
+    '@controller': 'News'
+    '@action':     'index'

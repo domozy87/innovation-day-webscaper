@@ -1,0 +1,15 @@
+{
+  "name": "WE-NEWS",
+  "version": "1.0.0",
+  "description": "Web Essentials News Bulletin",
+  "main": "scrap.js",
+  "author": "Web Essentials",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest",
+    "mysql"      : "^2.5.4",
+    "uuid"       : "^2.0.2",
+    "x-ray"      : "^2.3.0 "
+  }
+}

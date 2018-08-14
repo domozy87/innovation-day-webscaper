@@ -1,0 +1,39 @@
+<f:layout name="Default" />
+
+<f:section name="Title">A list of categories</f:section>
+
+<f:section name="Content">
+	<f:if condition="{categories}">
+		<f:then>
+			<table class="table table-hover table-responsive">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<f:for each="{categories}" as="category">
+						<tr>
+							<td>{category.name}</td>
+							<td>
+								<f:link.action action="show" arguments="{category: category}" class="btn btn-success"><span class="glyphicon glyphicon-list"></span></f:link.action>
+								<f:link.action action="edit" arguments="{category: category}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></f:link.action>
+
+								<f:form action="delete" arguments="{category: category}" style="display:inline">
+									<button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+								</f:form>
+							</td>
+						</tr>
+					</f:for>
+				</tbody>
+			</table>
+		</f:then>
+		<f:else>
+			<p>No categories created yet.</p>
+		</f:else>
+	</f:if>
+	<p>
+		<f:link.action action="new" class="btn btn-primary">New</f:link.action>
+	</p>
+</f:section>

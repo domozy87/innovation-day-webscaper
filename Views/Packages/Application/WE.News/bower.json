@@ -1,0 +1,21 @@
+{
+	"name": "we-news",
+	"description": "Configuration to install required web package manager for grunt",
+	"main": "index.js",
+	"authors": [
+		"Web Essentials"
+	],
+	"license": "ISC",
+	"keywords": [
+		"flow",
+		"News"
+	],
+	"homepage": "http://www.web-essentials.asia",
+	"private": true,
+	"devDependencies": {
+		"bootstrap-sass": "^3.3.6",
+		"font-awesome-sass": "^4.6.2",
+		"html5shiv": "^3.7.3",
+		"jquery-validation": "^1.15.0"
+	}
+}

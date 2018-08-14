@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+// Globals
+@import "Globals/Variables",
+		"Globals/Mixins";
+
+// Vendors
+@import "bootstrap",
+		"font-awesome";
+
+// Partials
+@import "Partials/Normalize",
+		"Partials/Utilities",
+		"Partials/Content",
+		"Partials/Footer";
+

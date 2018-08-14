@@ -1,0 +1,19 @@
+html,
+body {
+	height: 100%;
+	padding-top: 35px;
+}
+
+body {
+	font-size: 14px;
+	line-height: 20px;
+	color: $gray-base;
+	background-color: $white-base;
+}
+
+a,
+.btn {
+	&:focus {
+		outline: none !important;
+	}
+}
